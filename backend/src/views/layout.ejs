@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% if (env == 'production') { %>
+      <link rel="stylesheet" type="text/css" href="application.css">
+    <% } %>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="<%= bundle %>"></script>
+  </body>
+</html>

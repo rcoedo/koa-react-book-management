@@ -1,11 +1,13 @@
-#backend:
-  #image: node:6.5
-  #command: npm run dev
-  #volumes:
-    #- ./src/backend/:/app
-  #working_dir: /app
-  #ports:
-    #- "8080:8080"
+backend:
+  image: node:6.5
+  command: npm run dev
+  volumes:
+    - ./backend/:/app
+  environment:
+    - NODE_ENV=development
+  working_dir: /app
+  ports:
+    - "8080:8080"
 
 frontend:
   image: node:6.5
