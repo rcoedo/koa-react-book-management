@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <% if (env == 'production') { %>
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:700,400" rel="stylesheet" type="text/css">
+    <% if (config.env == 'production') { %>
       <link rel="stylesheet" type="text/css" href="application.css">
     <% } %>
   </head>
   <body>
     <div id="content"></div>
-    <script src="<%= bundle %>"></script>
+    <script src="<%= config.bundle %>"></script>
+    <script th:inline="javascript">
+     window.render(<%- JSON.stringify(initialState) %>, document.getElementById('content'));
+    </script>
   </body>
 </html>

@@ -1,0 +1,17 @@
+.book-search {
+    margin-top: 2.5em;
+    padding: 0.5em;
+}
+
+.book-search__input {
+    width: 100%;
+    font-size: 1.25rem;
+    height: 2em;
+    padding-right: 1em;
+
+    @include shadow-mixin;
+
+    &:focus {
+        border-color: $light-gray;
+    }
+}

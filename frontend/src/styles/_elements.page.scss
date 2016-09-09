@@ -1,0 +1,18 @@
+html {
+    background-color: #FAFAFA;
+    color: $dark-gray;
+    line-height: $base-line-height;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    font-style: $base-font-style;
+    font-weight: $base-font-weight;
+    letter-spacing: $base-letter-spacing;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga " on;
+}
+
+a {
+    color: $purple;
+}

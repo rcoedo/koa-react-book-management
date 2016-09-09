@@ -1,0 +1,17 @@
+.book-list {
+    margin-top: 1.5em;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.book-list__item {
+    display: flex;
+    padding: 0.5em;
+    width: percentage(1/7);
+
+    a {
+        color: $dark-gray;
+        text-decoration: none;
+    }
+}
