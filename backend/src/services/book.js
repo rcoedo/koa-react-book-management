@@ -28,7 +28,7 @@ export async function createBooks(model, books) {
 };
 
 export async function getBooks(model) {
-  return model.find();
+  return model.find({});
 }
 
 export async function createEmptyBook(model) {

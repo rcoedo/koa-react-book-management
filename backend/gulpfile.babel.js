@@ -4,10 +4,18 @@ import babel from "gulp-babel";
 import nodemon from "gulp-nodemon";
 import watch from "gulp-watch";
 import plumber from "gulp-plumber";
+import mocha from "gulp-mocha";
 
+const test = "test";
 const source = "src";
 const target = "lib";
 const entrypoint = `${target}/index.js`;
+
+gulp.task("test", () => {
+  gulp.src(`${test}/**/*.js`)
+    .pipe(babel())
+    .pipe(mocha());
+});
 
 gulp.task("templates", () => {
   gulp.src(`${source}/**/*.ejs`)
