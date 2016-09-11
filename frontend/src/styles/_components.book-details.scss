@@ -1,0 +1,30 @@
+.book-details-page {
+    margin-top: 2.5em;
+}
+
+.book-details {
+    margin-top: 1em;
+    display: flex;
+}
+
+.book-details__information {
+    border: 1px solid $light-gray;
+    background-color: $white;
+    padding: 1em;
+    margin-left: 1em;
+
+    * + * { margin-top: 0.5em; }
+
+    @include shadow-mixin;
+}
+
+.book-details__image { max-width: 250px; }
+.book-details__title { font-size: 1.5em; }
+.book-details__author { font-size: 0.75em;}
+.book-details__publisher { font-size: 0.75em;}
+.book-details__panel { * + * { margin-top: 0.5em; } }
+.book-details__information { width: 100% }
+.bd__panel__button {
+    width: 100%;
+    display: block;
+}

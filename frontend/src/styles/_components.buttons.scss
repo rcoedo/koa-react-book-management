@@ -1,0 +1,35 @@
+.floating-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: $purple;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  
+  @include shadow-mixin;
+}
+
+.floating-button__plus {
+  color: white;
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 55px;
+  font-size: 38px;
+  font-weight: 300;
+}
+
+.button {
+    padding: 0.5em;
+    border: 1px solid $light-gray;
+    background-color: $white;
+    @include shadow-mixin;
+}

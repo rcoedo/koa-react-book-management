@@ -36,6 +36,8 @@
     "webpack-dev-server": "^1.15.1"
   },
   "dependencies": {
+    "fredux": "^0.5.0-alpha",
+    "fredux-api-utils": "^0.4.0-alpha",
     "lodash": "^4.15.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",

@@ -21,7 +21,7 @@ export const books = [
     author: "Mike Cantelon, T. J. Holowaychuk, Marc Harter, Nathan Rajlich",
     publisher: "Manning Publications",
     thumbnail: "https://images-na.ssl-images-amazon.com/images/I/51twwFigyiL._SX258_BO1,204,203,200_.jpg",
-    description: ""
+    description: "Provides information on using Node.js to build scalable Web applications, covering such topics as asynchronous programming, data storage, and output templating."
   },
   {
     title: "JavaScript: The Definitive Guide",
