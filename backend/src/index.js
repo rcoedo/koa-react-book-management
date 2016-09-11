@@ -1,6 +1,7 @@
 import Koa from 'koa';
 import serve from 'koa-static';
 import convert from 'koa-convert';
+import bodyParser from 'koa-bodyparser';
 import Waterline from 'waterline';
 
 import * as seeds from 'src/seeds';
@@ -13,6 +14,7 @@ import views from 'src/views';
 // Configure Koa
 const app = new Koa();
 app.use(views);
+app.use(bodyParser());
 app.use(convert(serve(__dirname + '/public')));
 app.use(controller.routes());
 

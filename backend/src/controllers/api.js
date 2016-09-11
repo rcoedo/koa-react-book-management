@@ -1,5 +1,5 @@
 import KoaRouter from 'koa-router';
-import { getBooks, deleteBook, createEmptyBook } from 'src/services/book';
+import { getBooks, updateBook, deleteBook, createEmptyBook } from 'src/services/book';
 import models from 'src/models';
 
 const api = new KoaRouter().prefix('/api');
@@ -22,6 +22,15 @@ api.del('/books/:bookId', async function(ctx) {
 });
 
 api.put('/books/:bookId', async function(ctx) {
+  const {
+    models: { book },
+    params: { bookId },
+    request: { body: values }
+  } = ctx;
+
+  ctx.body = {
+    book: await updateBook(book, bookId, values)
+  };
 });
 
 export default api;

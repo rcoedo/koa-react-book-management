@@ -37,7 +37,7 @@ const BookUl = ({ children }) => (
 const bookFilter = (fields, str) => book => (
   fields
     .map(field => book[field])
-    .map(value => value.toLowerCase().includes(str))
+    .map(value => value.toLowerCase().includes(str.toLowerCase()))
     .reduce((acc, curr) => (acc || curr), false)
 );
 

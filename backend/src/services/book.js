@@ -35,6 +35,7 @@ export async function createEmptyBook(model) {
   return createBook(model, emptyBook);
 }
 
-export async function updateBook(model, book) {
-  const book = await model.find()
+export async function updateBook(model, id, values) {
+  await model.update({ id }, values);
+  return model.findOne({ id });
 }
