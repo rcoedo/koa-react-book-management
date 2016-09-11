@@ -3,8 +3,7 @@ DOCKER_FLAGS=-t -w /app --rm
 FRONTEND=$(DOCKER_FLAGS) -v $(shell pwd)/frontend:/app $(NODE)
 BACKEND=$(DOCKER_FLAGS) -v $(shell pwd)/backend:/app $(NODE)
 
-REGISTRY=309557783176.dkr.ecr.us-east-1.amazonaws.com
-IMAGE=$(REGISTRY)/node-library:latest
+IMAGE=koa-react-book-management:latest
 
 dev:
 	docker-compose up

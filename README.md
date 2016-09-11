@@ -1,4 +1,4 @@
-## node library
+## koa-react-book-management
 
 This is a very basic book CRUD SPA application done in koa2 + react + redux + mongodb. The application comes with a
 dockerized dev environment and a small Dockerfile to build an image with the whole thing for production.
@@ -13,6 +13,7 @@ The backend runs on port 8080. In development the assets are served by webpack s
 In production, the frontend is bundled in a single js file and a single css file which are served by the backend.
 
 ### Running the tests
+
 Just `make test` in the project root.
 
 ### Running in local
@@ -27,7 +28,7 @@ To run the application in local you need to have docker installed, then run the 
 The app is configured to run in aws using ECS and EC2. To deploy the application run:
 
 1. `make package` packages the whole thing and creates a docker image.
-2. `make deploy` pushes the image to ECS and launches the container.
+2. `make deploy` pushes the image.
 
 ### Frontend
 
@@ -36,7 +37,7 @@ The app is configured to run in aws using ECS and EC2. To deploy the application
 * All the code is linted, following most of AirBnB js conventions.
 * For the asynchronous calls I'm using [fredux](https://github.com/trabe/fredux), a small set of middleware utils that I've done in my current job. It features a middleware capable of executing promises and launching standard actions based on the result of the execution (REQUEST, FAILURE, SUCCESS).
 * The styles are written in sass and autoprefixed.
-* Part of the layouting was done using flexbox.
+* Part of the layout is done using flexbox.
 * The styles are organized using a combination of the ITCSS and BEM css models.
 
 ### Backend
@@ -45,12 +46,11 @@ The app is configured to run in aws using ECS and EC2. To deploy the application
 * The backend is compiled and run using babel and gulp.
 * For the web server I'm using koa2.
 * The templates (there is only one template used for the layout) is written in ejs.
-* The ORM is sails and the database is mongo.
-* The backend follows a layered architecture (MVC). I also use a service layer in the model to decouple the controllers from waterline.
+* The ORM is waterline and the database is mongo.
 
 ### Missing things (didn't make it in time!)
 
-* Only the service layer is tested, and the tests are poor.
+* Only the service layer is tested, and the tests are very poor.
 * Error handling is non-existent.
 * The frontend could use a couple of spinners to give the user feedback about loading things.
-* The styling could be improved.
+* The styles could be improved.
