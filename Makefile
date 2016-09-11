@@ -4,7 +4,7 @@ FRONTEND=$(DOCKER_FLAGS) -v $(shell pwd)/frontend:/app $(NODE)
 BACKEND=$(DOCKER_FLAGS) -v $(shell pwd)/backend:/app $(NODE)
 
 REGISTRY=309557783176.dkr.ecr.us-east-1.amazonaws.com
-IMAGE=$(REGISTRY)/uke-maker:latest
+IMAGE=$(REGISTRY)/node-library:latest
 
 dev:
 	docker-compose up
