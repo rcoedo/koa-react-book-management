@@ -9,6 +9,9 @@ IMAGE=$(REGISTRY)/node-library:latest
 dev:
 	docker-compose up
 
+test:
+	docker run $(BACKEND) npm run test
+
 install-fe:
 	docker run $(FRONTEND) npm install
 

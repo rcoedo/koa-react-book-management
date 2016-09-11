@@ -12,6 +12,9 @@ The backend runs on port 8080. In development the assets are served by webpack s
 
 In production, the frontend is bundled in a single js file and a single css file which are served by the backend.
 
+### Running the tests
+Just `make test` in the project root.
+
 ### Running in local
 
 To run the application in local you need to have docker installed, then run the following commands
